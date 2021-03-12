@@ -22,7 +22,7 @@
                                 while($phonebook->have_posts()): $phonebook->the_post(); ?>
                                 <li>
                                     <span class="right"><?php the_field('caption')?></span>
-                                    <span class="left"><a href="tel:+98<?php the_field('phone_number'); ?>"><?php the_field("phone_number_label"); ?></a></span>
+                                    <span class="left"><a href="tel:+98<?php echo substr(get_field('phone_number'), 1); ?>"><?php the_field("phone_number_label"); ?></a></span>
                                 </li>
                             <?php
                                 endwhile;
