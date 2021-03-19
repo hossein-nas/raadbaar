@@ -18,7 +18,7 @@ while( have_posts() ): the_post();
                         <div class="col-12 col-lg-9">
                             <div class="head-section">
                                 <div class="thumbnail">
-                                    <?php the_post_thumbnail(); ?>
+                                    <?php the_post_thumbnail('medium'); ?>
                                 </div>
 
                                 <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

@@ -27,7 +27,7 @@ if($count_posts): ?>
 
                     <div class="item service-card">
                         <div class="thumbnail">
-                            <img src="<?php echo get_the_post_thumbnail_url()?>" alt="">
+                            <?php the_post_thumbnail('large'); ?>
                         </div>
                         <div class="body">
                             <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>

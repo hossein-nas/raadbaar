@@ -18,7 +18,7 @@ if($articles_count) :?>
         <div class="item">
             <a href="<?php the_permalink() ?>">
                 <div class="thumbnail">
-                    <?php the_post_thumbnail() ?>
+                    <?php the_post_thumbnail('medium') ?>
                 </div>
                 <div class="body">
                     <h3 class="title"><?php the_title() ?></h3>

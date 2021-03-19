@@ -13,7 +13,7 @@ if($count): ?>
 <?php while($news->have_posts() ): $news->the_post(); ?>
         <div class="item">
             <a href="<?php the_permalink() ?>">
-                <div class="thumbnail"> <?php the_post_thumbnail() ?> </div>
+                <div class="thumbnail"> <?php the_post_thumbnail('medium') ?> </div>
                 <div class="body">
                     <h3 class="title"><?php the_title() ?></h3>
                     <p class="text">حمل و نقل بار و کالا بصورت بین شهری یکی از ویژه ترین خدمات مجموعه آنی بار است که با کمترین و به همراه بهترین بیمه نامه در اختیار شما هزینه قرار میگیرد .</p>

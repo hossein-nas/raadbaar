@@ -23,7 +23,7 @@
                 <div class="vehicle-item swiper-slide">
                     <h3 class="header"><?php the_title() ?></h3>
                     <div class="thumbnail">
-                        <?php the_post_thumbnail() ?>
+                        <?php the_post_thumbnail('medium') ?>
                     </div>
                     <div class="link-to-vehicle">
                         <a href="<?php the_permalink() ?>">
