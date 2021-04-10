@@ -64,7 +64,7 @@
         </div>
     </footer>
     <div class="call-us-overlay">
-        <div class="header">با ما در تماس باشید!</div>
+        <a href="#call-us" class="header" onclick="void(0)">با ما در تماس باشید!</a>
         <div class="body">
             <?php get_template_part('template-parts/content/content', 'phone-box'); ?>
             
