@@ -8,6 +8,7 @@ require_once( get_theme_file_path() . '/inc/attach_custom_post_type_to_tag_archi
 require_once( get_theme_file_path() . '/inc/remove_thumbnail_hardcoded_dimensions.php');
 require_once( get_theme_file_path() . '/inc/add_badge_to_orders_menu.php');
 require_once( get_theme_file_path() . '/inc/order_metabox.php');
+require_once( get_theme_file_path() . '/inc/number_box_shortcode.php');
 
 function add_cors_http_header(){
     header("Access-Control-Allow-Origin: *");
