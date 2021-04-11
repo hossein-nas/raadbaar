@@ -63,12 +63,8 @@
             </div>
         </div>
     </footer>
-    <div class="call-us-overlay">
-        <a href="#call-us" class="header" onclick="void(0)">با ما در تماس باشید!</a>
-        <div class="body">
-            <?php get_template_part('template-parts/content/content', 'phone-box'); ?>
-        </div>
-    </div>
+
+    <?php do_action('add_call_us_box') ?>
     <?php wp_footer() ?>
 </body>
 </html>

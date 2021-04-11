@@ -1,4 +1,6 @@
 <?php
+require_once( get_theme_file_path() . '/inc/util_funcs.php');
+require_once( get_theme_file_path() . '/inc/define_actions.php');
 require_once( get_theme_file_path() . '/inc/raadbaar_setting_section.php');
 require_once( get_template_directory() . '/inc/order_page.php');
 require_once( get_theme_file_path() . '/inc/order_list_table.php');
@@ -27,8 +29,10 @@ function raadbaar_setup(){
 add_action('after_setup_theme', 'raadbaar_setup');
 
 function inject_scripts(){
-    wp_enqueue_script('main_script', get_theme_file_uri('js/main.js'), null, '1.0', true);
-    wp_enqueue_style('main_styles', get_theme_file_uri('css/main.css'), null, '2.0');
+    $js_file = get_theme_file_uri('js/main.js');
+    $css_file = get_theme_file_uri('css/main.css');
+    wp_enqueue_script('main_script', $js_file, null, filemtime($js_file), true);
+    wp_enqueue_style('main_styles', $css_file, null, filemtime($css_file));
 
     $data = array(
         'root_url' => get_site_url(),
