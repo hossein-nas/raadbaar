@@ -67,7 +67,6 @@
         <a href="#call-us" class="header" onclick="void(0)">با ما در تماس باشید!</a>
         <div class="body">
             <?php get_template_part('template-parts/content/content', 'phone-box'); ?>
-            
         </div>
     </div>
     <?php wp_footer() ?>
