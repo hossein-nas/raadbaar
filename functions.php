@@ -30,9 +30,11 @@ add_action('after_setup_theme', 'raadbaar_setup');
 
 function inject_scripts(){
     $js_file = get_theme_file_uri('js/main.js');
+    $js_file_path = get_template_directory() . '/js/main.js';
     $css_file = get_theme_file_uri('css/main.css');
-    wp_enqueue_script('main_script', $js_file, null, filemtime($js_file), true);
-    wp_enqueue_style('main_styles', $css_file, null, filemtime($css_file));
+    $css_file_path = get_template_directory() . '/css/main.css';
+    wp_enqueue_script('main_script', $js_file, null, filemtime($js_file_path), true);
+    wp_enqueue_style('main_styles', $css_file, null, filemtime($css_file_path));
 
     $data = array(
         'root_url' => get_site_url(),
