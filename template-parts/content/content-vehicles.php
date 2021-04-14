@@ -27,8 +27,8 @@
                     </div>
                     <div class="link-to-vehicle">
                         <a href="<?php the_permalink() ?>">
-                            اطلاعات تکمیلی در مورد <?php the_title() ?>
                             <i class="bi-arrow-left-short"></i>
+                            مشاهده‌ی اطلاعات تکمیلی
                         </a>
                     </div>
                 </div>
