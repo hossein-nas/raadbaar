@@ -11,6 +11,7 @@ require_once( get_theme_file_path() . '/inc/remove_thumbnail_hardcoded_dimension
 require_once( get_theme_file_path() . '/inc/add_badge_to_orders_menu.php');
 require_once( get_theme_file_path() . '/inc/order_metabox.php');
 require_once( get_theme_file_path() . '/inc/number_box_shortcode.php');
+require_once( get_theme_file_path() . '/inc/dequeue_scripts.php');
 
 function add_cors_http_header(){
     header("Access-Control-Allow-Origin: *");
@@ -30,11 +31,9 @@ add_action('after_setup_theme', 'raadbaar_setup');
 
 function inject_scripts(){
     $js_file = get_theme_file_uri('js/main.js');
-    $js_file_path = get_template_directory() . '/js/main.js';
     $css_file = get_theme_file_uri('css/main.css');
-    $css_file_path = get_template_directory() . '/css/main.css';
-    wp_enqueue_script('main_script', $js_file, null, filemtime($js_file_path), true);
-    wp_enqueue_style('main_styles', $css_file, null, filemtime($css_file_path));
+    wp_enqueue_script('main_script', $js_file, null, '1.0.2', true);
+    wp_enqueue_style('main_styles', $css_file, null, '1.0.2', 'all');
 
     $data = array(
         'root_url' => get_site_url(),
