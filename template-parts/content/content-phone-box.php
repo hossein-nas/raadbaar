@@ -1,7 +1,7 @@
 <?php
     $args = array(
         'post_type' => 'phonebook',
-        'order' => 'ASC',
+        'order' => 'DESC',
         'posts_per_page' => -1,
     );
     $phonebook = new WP_Query($args);

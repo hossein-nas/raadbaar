@@ -11,6 +11,10 @@ function yield_call_us_box(){
         <div class="body">
             <?php get_template_part('template-parts/content/content', 'phone-box'); ?>
         </div>
+        <div class="close-button">
+            <i class="bi bi-x-circle"></i>
+            بستن
+        </div>
     </div>
-<?php
+    <?php
 }
