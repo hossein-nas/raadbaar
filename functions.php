@@ -32,8 +32,8 @@ add_action('after_setup_theme', 'raadbaar_setup');
 function inject_scripts(){
     $js_file = get_theme_file_uri('js/main.js');
     $css_file = get_theme_file_uri('css/main.css');
-    wp_enqueue_script('main_script', $js_file, null, '1.0.3', true);
-    wp_enqueue_style('main_styles', $css_file, null, '1.0.3', 'all');
+    wp_enqueue_script('main_script', $js_file, null, '1.0.4', true);
+    wp_enqueue_style('main_styles', $css_file, null, '1.0.4', 'all');
 
     $data = array(
         'root_url' => get_site_url(),

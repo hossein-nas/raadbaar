@@ -1,7 +1,7 @@
 <header>
     <div class="container">
         <a href="<?php echo home_url() ?>" class="logo">
-            <img src="<?php echo get_theme_file_uri() ?>/assets/images/logo_raadbaar.svg" alt="">
+            <img width="556" height="181" src="<?php echo get_theme_file_uri() ?>/assets/images/logo_raadbaar.svg" alt="">
         </a>
         <a href="tel:+982156858135" class="call-us">
             <div class="phoneNumber">

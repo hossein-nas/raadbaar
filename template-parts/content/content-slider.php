@@ -21,8 +21,13 @@ if($slider->found_posts): ?>
                     <div class="carousel-item <?php echo $iteration ==0 ? 'active' : '' ?>">
                         <?php the_post_thumbnail(0, array('class'=> 'd-block w-100')); ?>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5><a href="<?php the_field('related_post'); ?>"> <?php the_title(); ?> </a></h5>
-                            <p><?php echo wp_strip_all_tags(get_the_content()) ?></p>
+                            <?php if(get_field('related_post')): ?>
+                                <h5><a href="<?php the_field('related_post'); ?>"> <?php the_title(); ?> </a></h5>
+                                <p><?php echo wp_strip_all_tags(get_the_content()) ?></p>
+                            <?php else: ?>
+                                <h5><?php the_title(); ?></h5>
+                                <p><?php echo wp_strip_all_tags(get_the_content()) ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <?php $iteration++; endwhile; ?>
