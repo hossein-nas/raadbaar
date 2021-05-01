@@ -1,10 +1,11 @@
-<?php 
+<?php
 
 get_header();
 
 $args = array(
     'post_type' => 'vehicles',
-    'posts_per_page' => -1
+    'posts_per_page' => -1,
+    'order' => 'DESC'
 );
 $vehicles= new WP_Query($args);
 ?>
@@ -15,10 +16,10 @@ $vehicles= new WP_Query($args);
 
                             <div class="nav nav-pills">
                                 <?php $iteration = 0;
-                                while($vehicles->have_posts()): $vehicles->the_post(); $iteration++ ?>
+                                while ($vehicles->have_posts()): $vehicles->the_post(); $iteration++ ?>
                                 <div class="vehicle-indicator <?php echo $iteration == 1 ? 'active' : '' ?>" data-bs-toggle="tab" data-bs-target="#vehicle-id-<?php the_ID() ?>" role="tab" aria-controls="one" aria-selected="true">
                                     <div class="thumbnail">
-                                        <?php $img = get_field('vector_figure'); 
+                                        <?php $img = get_field('vector_figure');
                                         $thumb = wp_get_attachment_url($img['ID']);
                                         ?>
                                         <img src="<?php echo $thumb?>" alt="khavar">
@@ -42,16 +43,16 @@ $vehicles= new WP_Query($args);
                         
                     </div>
                     <div class="col-12 col-md-8 vehicles-show-page tab-content">
-                        <?php 
+                        <?php
                         $vehicles->rewind_posts();
                         $iteration = 0;
-                        while($vehicles->have_posts()): $vehicles->the_post(); $iteration++; ?>
+                        while ($vehicles->have_posts()): $vehicles->the_post(); $iteration++; ?>
                         <div class="vehicle-page tab-pane show <?php echo $iteration==1 ? 'active' : ''; ?>" id="vehicle-id-<?php the_ID() ?>" role="tabpanel">
                             <div class="heading">
                                 <div class="thumbnail">
                                     <?php the_post_thumbnail(); ?>
                                     <span class="vector_figure">
-                                        <?php $img = get_field('vector_figure'); 
+                                        <?php $img = get_field('vector_figure');
                                         $thumb = wp_get_attachment_url($img['ID']);
                                         ?>
                                         <img src="<?php echo $thumb?>" alt="khavar">

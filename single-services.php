@@ -2,7 +2,7 @@
 
 get_header();
 
-while( have_posts() ): the_post();
+while (have_posts()): the_post();
     ?>
     <div class="container">
         <section id="ServicesSingle">
@@ -33,37 +33,8 @@ while( have_posts() ): the_post();
                 <div class="col-12 col-md-3 sidebar">
 
                  <?php get_template_part('template-parts/content/content', 'get-sub-services'); ?> 
-                 <div class="sidebar-widget">
-                    <div class="header">
-                        <h4>ماشین‌های متناسب</h4>
-                    </div>
-                    <ul >
-                        <li>
-                            <div class="vehicle-item bg-thumb-card">
-                                <div class="thumb">
-                                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/nissan.png" alt="">
-                                </div>
-                                <a href="#">نیسان</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="vehicle-item bg-thumb-card">
-                                <div class="thumb">
-                                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/kamiyoun_tak.png" alt="">
-                                </div>
-                                <a href="#">کامیون تک</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="vehicle-item bg-thumb-card">
-                                <div class="thumb">
-                                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/khavar.png" alt="">
-                                </div>
-                                <a href="#">خاور (کامیونت)</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                 <related-vehicles :post-id="<?php the_ID() ?>"></related-vehicles>
+                 
             </div>
         </div>
     </section>
@@ -74,7 +45,7 @@ endwhile;
 $fast_order_needed  = get_field('fast_order_needed');
 
 
-if( $fast_order_needed ){
+if ($fast_order_needed) {
     get_template_part('template-parts/content/content', 'fast-ordering');
 }
 get_template_part('template-parts/content/content', 'ask-question');

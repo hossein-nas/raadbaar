@@ -2,7 +2,7 @@
 
 get_header();
 
-while( have_posts() ): the_post();
+while (have_posts()): the_post();
 ?>
             <div class="container" id="VehicleSinglePage">
                 <div class="row">
@@ -107,10 +107,10 @@ while( have_posts() ): the_post();
                 </div>
                 <div class="row content-row">
                     <div class="col-12 col-lg-9 body-text">
-                        <?php if( !empty( get_the_content() )): ?>
+                        <?php if (!empty(get_the_content())): ?>
                         <div class="content">
-                            <?php 
-                                the_content(); 
+                            <?php
+                                the_content();
                             ?>
                         </div>
                         <?php endif; ?>
@@ -118,7 +118,7 @@ while( have_posts() ): the_post();
 
                     <div class="col-12 col-lg-3 col-md-6 sidebar">
 
-                        <div class="sidebar-widget">
+                        <!-- <div class="sidebar-widget">
                             <div class="header">
                                 <h4>سرویسهای مناسب این وسیله نقلیه</h4>
                             </div>
@@ -136,7 +136,7 @@ while( have_posts() ): the_post();
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 

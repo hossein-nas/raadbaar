@@ -1,10 +1,4 @@
 /*!
-  * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
-  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-  */
-
-/*!
  * GSAP 3.6.1
  * https://greensock.com
  *
@@ -13,12 +7,6 @@
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
 */
-
-/*!
- * Vue.js v2.6.12
- * (c) 2014-2020 Evan You
- * Released under the MIT License.
- */
 
 /*!
  * cast `I.Scrollbar` to `Scrollbar` to avoid error
