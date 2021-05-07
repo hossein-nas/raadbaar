@@ -44,10 +44,10 @@ function inject_scripts()
     $vendor_file = get_theme_file_uri('js/vendor.js');
     $js_file = get_theme_file_uri('js/main.js');
     $css_file = get_theme_file_uri('css/main.css');
-    wp_enqueue_script('manifest-script', $manifest_file, null, '1.0.6', true);
-    wp_enqueue_script('vendor-scripts', $vendor_file, ['manifest-script'], '1.0.6', true);
-    wp_enqueue_script('main_script', $js_file, ['vendor-scripts'], '1.0.6', true);
-    wp_enqueue_style('main_styles', $css_file, null, '1.0.6', 'all');
+    wp_enqueue_script('manifest-script', $manifest_file, null, '1.0.7', true);
+    wp_enqueue_script('vendor-scripts', $vendor_file, ['manifest-script'], '1.0.7', true);
+    wp_enqueue_script('main_script', $js_file, ['vendor-scripts'], '1.0.7', true);
+    wp_enqueue_style('main_styles', $css_file, null, '1.0.7', 'all');
 
     $data = array(
         'root_url' => get_site_url(),
@@ -154,6 +154,7 @@ function customize_main_menu($items)
             continue;
         }
         if (in_array('menu-item-has-children', $item->classes)) {
+            $item->url= '#';
             $item->title = $item->title . '<span class="arrow"><i class="bi bi-caret-down-fill"></i></span>';
             continue;
         }
