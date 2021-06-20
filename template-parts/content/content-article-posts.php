@@ -2,18 +2,18 @@
 
 $args = [
     'post_type' => 'articles',
-    'post_per_page' => 4,
+    'posts_per_page' => 4,
 ];
 $articles = new WP_Query($args);
 
 $articles_count = wp_count_posts('articles')->publish;
 
-if($articles_count) :?>
+if ($articles_count) :?>
 
 <article id="Posts">
     <div class="list">
 
-<?php while($articles->have_posts() ): $articles->the_post(); ?>
+<?php while ($articles->have_posts()): $articles->the_post(); ?>
 
         <div class="item">
             <a href="<?php the_permalink() ?>">
@@ -22,11 +22,11 @@ if($articles_count) :?>
                 </div>
                 <div class="body">
                     <h3 class="title"><?php the_title() ?></h3>
-                    <p class="text"><?php echo wp_trim_words( get_the_content(), 30 ) ?></p>
+                    <p class="text"><?php echo wp_trim_words(get_the_content(), 30) ?></p>
                     <div class="detail">
                         <div class="author">
                             <div class="thumbnail">
-                                <?php echo get_avatar( get_the_author_meta('ID'), 32) ?>
+                                <?php echo get_avatar(get_the_author_meta('ID'), 32) ?>
                             </div>
                             <?php the_author() ?>
                         </div>

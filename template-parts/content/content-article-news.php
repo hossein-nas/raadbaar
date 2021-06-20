@@ -1,16 +1,16 @@
 <?php
 $args = [
     'post_type' => 'post',
-    'post_per_page' => 4,
+    'posts_per_page' => 4,
 ];
 $news = new WP_Query($args);
 $count = wp_count_posts('post')->publish;
 
-if($count): ?>
+if ($count): ?>
 <article id="News">
     <div class="list">
 
-<?php while($news->have_posts() ): $news->the_post(); ?>
+<?php while ($news->have_posts()): $news->the_post(); ?>
         <div class="item">
             <a href="<?php the_permalink() ?>">
                 <div class="thumbnail"> <?php the_post_thumbnail('medium') ?> </div>
@@ -20,7 +20,7 @@ if($count): ?>
                     <div class="detail">
                         <div class="author">
                             <div class="thumbnail">
-                                <?php echo get_avatar( get_the_author_meta('ID'), 32) ?>
+                                <?php echo get_avatar(get_the_author_meta('ID'), 32) ?>
                             </div>
                             <?php the_author() ?>
                         </div>
