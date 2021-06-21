@@ -22,9 +22,7 @@
                 ?>
                 
             </section>
-            <?php
-            rb_pagination();
-            ?>
+            <?php rb_pagination(); ?>
 <!--             <section id="Pagination">
                 <ul class="pagination-links">
                     <li class="page prev"><a href="#link"></a></li>

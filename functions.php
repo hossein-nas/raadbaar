@@ -185,24 +185,24 @@ function rb_pagination($pages = '', $range = 2)
     if (1 != $pages) {
         echo "<section id='Pagination'>\n\n<ul class='pagination-links'>";
         if ($paged > 2 && $paged > $range+1 && $showitems < $pages) {
-            echo "<li class='page'><a href='".get_pagenum_link(1)."' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>";
+            echo "<li class='page'><a href='".get_pagenum_link(1)."' aria-label='Previous'><span aria-hidden='true'>&raquo;</span></a></li>";
         }
         if ($paged > 1 && $showitems < $pages) {
-            echo "<li class='page'><a href='".get_pagenum_link($paged - 1)."' aria-label='Previous'><span aria-hidden='true'>&lsaquo;</span></a></li>";
+            echo "<li class='page prev'><a href='".get_pagenum_link($paged - 1)."' aria-label='Previous'><span aria-hidden='true'></span></a></li>";
         }
 
 
         for ($i=1; $i <= $pages; $i++) {
             if (1 != $pages &&(!($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems)) {
-                echo ($paged == $i)? "<li class='page current'><a href='".get_pagenum_link($i)."'>".$i."</a></li>" : "<li class='page'><a href='".get_pagenum_link($i)."' class='inactive'>".$i."</a></li>";
+                echo ($paged == $i)? "<li class='page current'><a href='".get_pagenum_link($i)."'>".fa_number($i)."</a></li>" : "<li class='page'><a href='".get_pagenum_link($i)."' class='inactive'>". fa_number($i)."</a></li>";
             }
         }
 
         if ($paged < $pages && $showitems < $pages) {
-            echo "<li class='page'><a href='".get_pagenum_link($paged + 1)."' aria-label='Previous'><span aria-hidden='true'>&rsaquo;</span></a></li>";
+            echo "<li class='page next'><a href='".get_pagenum_link($paged + 1)."' aria-label='Previous'><span aria-hidden='true'></span></a></li>";
         }
         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) {
-            echo "<li class='page'><a href='".get_pagenum_link($pages)."' aria-label='Previous'><span aria-hidden='true'>&raquo;</span></a></li>";
+            echo "<li class='page'><a href='".get_pagenum_link($pages)."' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>";
         }
         echo "</ul>\n</section>";
     }
